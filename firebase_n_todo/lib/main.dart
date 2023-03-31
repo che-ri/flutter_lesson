@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:todo_app/controller/auth_controller.dart';
-import 'package:todo_app/pages/home_page.dart';
-import 'package:todo_app/pages/login_page.dart';
-import 'package:todo_app/pages/signup_page.dart';
-import 'package:todo_app/pages/write_page.dart';
+import 'package:firebase_n_todo/controller/auth_controller.dart';
+import 'package:firebase_n_todo/pages/home_page.dart';
+import 'package:firebase_n_todo/pages/login_page.dart';
+import 'package:firebase_n_todo/pages/signup_page.dart';
+import 'package:firebase_n_todo/pages/write_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 

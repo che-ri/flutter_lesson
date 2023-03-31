@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/controller/auth_controller.dart';
+import 'package:firebase_n_todo/controller/auth_controller.dart';
 
 class SignupPage extends StatelessWidget {
   SignupPage({Key? key}) : super(key: key);
@@ -35,9 +35,12 @@ class SignupPage extends StatelessWidget {
                       border: InputBorder.none),
                 ),
                 const SizedBox(height: 20),
-                ElevatedButton(onPressed: (){
-                  AuthController.to.signup(idController.text, passwordController.text);
-                }, child: Text('완료'))
+                ElevatedButton(
+                    onPressed: () {
+                      AuthController.to
+                          .signup(idController.text, passwordController.text);
+                    },
+                    child: Text('완료'))
               ]))),
     );
   }

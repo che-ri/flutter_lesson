@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
-import 'package:todo_app/model/todo_model.dart';
+import 'package:firebase_n_todo/model/todo_model.dart';
 
 class TodoController extends GetxController {
   static TodoController get to => Get.find<TodoController>();

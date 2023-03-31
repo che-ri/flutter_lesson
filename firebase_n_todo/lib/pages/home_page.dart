@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:todo_app/controller/auth_controller.dart';
-import 'package:todo_app/controller/todo_controller.dart';
-import 'package:todo_app/widget/todo_item.dart';
+import 'package:firebase_n_todo/controller/auth_controller.dart';
+import 'package:firebase_n_todo/controller/todo_controller.dart';
+import 'package:firebase_n_todo/widget/todo_item.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,7 +15,6 @@ class HomePage extends StatelessWidget {
           return Scaffold(
               appBar: AppBar(
                 title: Text('할일 목록'),
-
                 actions: AuthController.to.isLogin == true
                     ? null
                     : [

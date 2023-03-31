@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:state_widget_example/my_stateful_widget.dart';
-import 'package:state_widget_example/my_stateless_widget.dart';
+import 'package:lifecycle_n_state_widget/my_stateful_widget.dart';
+import 'package:lifecycle_n_state_widget/my_stateless_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +12,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Widget Example with state',
-      home: MyStatelessWidget()
-    );
+        title: 'Widget Example with state', home: MyStatelessWidget());
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stopwatch/stopwatch_page.dart';
+import 'package:stream_n_stopwatch/stopwatch_page.dart';
 
 void main() {
   runApp(const MyApp());

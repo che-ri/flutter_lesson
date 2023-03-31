@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:todo_app/controller/todo_controller.dart';
+import 'package:firebase_n_todo/controller/todo_controller.dart';
 
 class WritePage extends StatelessWidget {
   WritePage({Key? key}) : super(key: key);
@@ -17,23 +17,27 @@ class WritePage extends StatelessWidget {
             appBar: AppBar(title: Text('할일 작성')),
             body: Center(
                 child: Padding(
-                  padding: EdgeInsets.only(left: 12, right: 12),
-                  child: Column(children: [
-                    TextField(
-                      controller: inputController,
-                      decoration: InputDecoration(
-                          hintText: '할일을 입력해 주세요.', border: InputBorder.none),
-                    ),
-                    ElevatedButton(onPressed: () {
+              padding: EdgeInsets.only(left: 12, right: 12),
+              child: Column(children: [
+                TextField(
+                  controller: inputController,
+                  decoration: InputDecoration(
+                      hintText: '할일을 입력해 주세요.', border: InputBorder.none),
+                ),
+                ElevatedButton(
+                    onPressed: () {
                       /// 할일을 추가합니다.
                       controller.addTodo(inputController.text);
+
                       /// TextField의 값을 초기화합니다.
                       inputController.text = '';
+
                       /// 이전 페이지로 이동합니다. (홈으로 이동)
                       Get.back();
-                    }, child: Text('작성완료'))
-                  ]),
-                )),
+                    },
+                    child: Text('작성완료'))
+              ]),
+            )),
           );
         });
   }
