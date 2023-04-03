@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class MyStatefulWidget extends StatefulWidget {
   MyStatefulWidget({super.key}) {
-    print('👋🏻 constructor : 클래스 생성 단계입니다.');
+    print('constructor : 클래스 생성 단계입니다.');
   }
 
   @override
@@ -16,36 +16,36 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
   @override
   void initState() {
     super.initState();
-    print('🗂️ initState : State 생성 단계입니다.');
+    print('initState : State 생성 단계입니다.');
   }
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    print('♻️ didChangeDependencies : 종속성이 변경되는 단계입니다.');
+    print('didChangeDependencies : 종속성이 변경되는 단계입니다.');
   }
 
   @override
   void didUpdateWidget(covariant MyStatefulWidget oldWidget) {
     super.didUpdateWidget(oldWidget);
-    print('🆕 didUpdateWidget : 위젯이 업데이트되는 단계입니다.');
+    print('didUpdateWidget : 위젯이 업데이트되는 단계입니다.');
   }
 
   @override
   void deactivate() {
     super.deactivate();
-    print('🗑️ deactivate : State가 삭제되는 단계입니다.');
+    print('deactivate : State가 삭제되는 단계입니다.');
   }
 
   @override
   void dispose() {
     super.dispose();
-    print('️🗑️ dispose : 클래스가 삭제되는 단계입니다.');
+    print('️dispose : 클래스가 삭제되는 단계입니다.');
   }
 
   @override
   Widget build(BuildContext context) {
-    print('🎨 build : 위젯을 화면에 그려주는 단계입니다.');
+    print('build : 위젯을 화면에 그려주는 단계입니다.');
     return Scaffold(
         body: Center(
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -103,7 +103,7 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
         ElevatedButton(
             onPressed: () {
               setState(() {
-                cnt= cnt+1;
+                cnt = cnt + 1;
               });
             },
             child: Text('리스트추가')),
