@@ -1,14 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-
-/// points에 어떠한 값이 들어갈 지 서술합니다.
-class DrawingArea {
-  /// [point] : 점의 좌표
-  /// [areaPaint] : draw style
-  Offset point;
-  Paint areaPaint;
-  DrawingArea({required this.point, required this.areaPaint});
-}
+import 'package:painter/draw_painter.dart';
 
 class DrawController extends GetxController {
   /// 색칠을 한 영역에 대한 path가 담겨질 곳입니다.

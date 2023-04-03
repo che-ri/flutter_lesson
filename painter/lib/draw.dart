@@ -14,23 +14,25 @@ class _DrawPageState extends State<DrawPage> {
   @override
   Widget build(BuildContext context) {
     return GetBuilder(
-      init : DrawController(),
+      init: DrawController(),
       builder: (DrawController controller) {
-        return Scaffold(
-          body: GestureDetector(
-              /// 모든 이벤트처리를 drawController에게 넘겨줍니다.
-              onPanDown: (details) => controller.onPanDown(details),
-              onPanUpdate: (details) => controller.onPanUpdate(details),
-              onPanEnd: (details) => controller.onPanEnd(),
-              child: Container(
-                  width: double.infinity,
-                  height: double.infinity,
-                  child: Container(
-                    child: CustomPaint(
-                      painter: DrawPainter(points: controller.points, drawColor: controller.drawColor, drawWidth: controller.drawWidth),
-                    ),
-                  ))),
-        );
+        return GestureDetector(
+
+            /// 모든 이벤트처리를 drawController에게 넘겨줍니다.
+            onPanDown: (details) => controller.onPanDown(details),
+            onPanUpdate: (details) => controller.onPanUpdate(details),
+            onPanEnd: (details) => controller.onPanEnd(),
+            child: Container(
+                width: double.infinity,
+                height: double.infinity,
+                child: Container(
+                  child: CustomPaint(
+                    painter: DrawPainter(
+                        points: controller.points,
+                        drawColor: controller.drawColor,
+                        drawWidth: controller.drawWidth),
+                  ),
+                )));
       },
     );
   }
