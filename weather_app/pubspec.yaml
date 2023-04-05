@@ -20,3 +20,25 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: Pretendard
+      fonts:
+        - asset: asset/font/Pretendard/Pretendard-Black.otf
+          weight: 900
+        - asset: asset/font/Pretendard/Pretendard-ExtraBold.otf
+          weight: 800
+        - asset: asset/font/Pretendard/Pretendard-Bold.otf
+          weight: 700
+        - asset: asset/font/Pretendard/Pretendard-Semibold.otf
+          weight: 600
+        - asset: asset/font/Pretendard/Pretendard-Medium.otf
+          weight: 500
+        - asset: asset/font/Pretendard/Pretendard-Regular.otf
+          weight: 400
+        - asset: asset/font/Pretendard/Pretendard-Light.otf
+          weight: 300
+        - asset: asset/font/Pretendard/Pretendard-ExtraLight.otf
+          weight: 200
+        - asset: asset/font/Pretendard/Pretendard-Thin.otf
+          weight: 100
+

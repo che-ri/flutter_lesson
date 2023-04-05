@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:weather_app/model2/weather.dart';
+import 'package:weather_app/theme/color.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -67,6 +68,7 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
         body: Container(
+            color: ColorTheme.black,
             padding: EdgeInsets.all(20),
             child: Center(
                 child: Column(
@@ -75,20 +77,136 @@ class _HomePageState extends State<HomePage> {
                     children: [
                   Text(
                     '현재 날씨',
-                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w900,
+                        color: ColorTheme.white),
                   ),
-                  weatherData?.current?.condition?.icon == null
-                      ? SizedBox(
-                          width: 200,
-                          height: 200,
-                        )
-                      : Image.network(weatherData!.current!.condition!.icon!,
-                          width: 200, height: 200),
-                  Text(
-                      '온도 : ${weatherData?.current?.tempC?.toString() ?? ""}º'),
-                  Text('국가 : ${weatherData?.location?.country ?? ""}'),
-                  Text('도시 : ${weatherData?.location?.name ?? ""}'),
-                  Text('시간 : ${weatherData?.location?.localtime ?? ""}'),
+                  Container(
+                      margin: EdgeInsets.symmetric(vertical: 20),
+                      child: weatherData?.current?.condition?.icon == null
+                          ? SizedBox(
+                              width: 200,
+                              height: 200,
+                            )
+                          : Image.network(
+                              weatherData!.current!.condition!.icon!,
+                              width: 200,
+                              height: 200)),
+                  Container(
+                    width: 400,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        color: ColorTheme.black2),
+                    child: Column(
+                      children: [
+                        /// 온도
+
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              width: 100,
+                              margin: EdgeInsets.only(right: 16),
+                              padding: EdgeInsets.all(16),
+                              child: Text(
+                                '온도',
+                                style: TextStyle(color: ColorTheme.grey),
+                              ),
+                              decoration: BoxDecoration(
+                                  border: Border(
+                                      right: BorderSide(
+                                          color: ColorTheme.orange, width: 3))),
+                            ),
+                            Container(
+                                width: 200,
+                                child: Text(
+                                  '${weatherData?.current?.tempC?.toString() ?? ""}º',
+                                  style: TextStyle(color: ColorTheme.white),
+                                ))
+                          ],
+                        ),
+
+                        /// 국가
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              width: 100,
+                              margin: EdgeInsets.only(right: 16),
+                              padding: EdgeInsets.all(16),
+                              child: Text(
+                                '국가',
+                                style: TextStyle(color: ColorTheme.grey),
+                              ),
+                              decoration: BoxDecoration(
+                                  border: Border(
+                                      right: BorderSide(
+                                          color: ColorTheme.yellow, width: 3))),
+                            ),
+                            Container(
+                                width: 200,
+                                child: Text(
+                                  weatherData?.location?.country ?? "",
+                                  style: TextStyle(color: ColorTheme.white),
+                                ))
+                          ],
+                        ),
+
+                        /// 도시
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              width: 100,
+                              margin: EdgeInsets.only(right: 16),
+                              padding: EdgeInsets.all(16),
+                              child: Text(
+                                '도시',
+                                style: TextStyle(color: ColorTheme.grey),
+                              ),
+                              decoration: BoxDecoration(
+                                  border: Border(
+                                      right: BorderSide(
+                                          color: ColorTheme.lime, width: 3))),
+                            ),
+                            Container(
+                                width: 200,
+                                child: Text(
+                                  weatherData?.location?.name ?? "",
+                                  style: TextStyle(color: ColorTheme.white),
+                                ))
+                          ],
+                        ),
+
+                        /// 시간
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              width: 100,
+                              margin: EdgeInsets.only(right: 16),
+                              padding: EdgeInsets.all(16),
+                              child: Text(
+                                '시간',
+                                style: TextStyle(color: ColorTheme.grey),
+                              ),
+                              decoration: BoxDecoration(
+                                  border: Border(
+                                      right: BorderSide(
+                                          color: ColorTheme.mint, width: 3))),
+                            ),
+                            Container(
+                                width: 200,
+                                child: Text(
+                                  weatherData?.location?.localtime ?? "",
+                                  style: TextStyle(color: ColorTheme.white),
+                                ))
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
                 ]))));
   }
 }
