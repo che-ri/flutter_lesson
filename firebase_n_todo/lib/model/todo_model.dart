@@ -1,5 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-
 class TodoModel {
   TodoModel({
     required this.id,
@@ -9,7 +7,7 @@ class TodoModel {
   String id;
   String todo;
 
-  TodoModel.fromJson(Map<String,dynamic> json)
+  TodoModel.fromJson(Map<String, dynamic> json)
       : id = json['id'],
         todo = json['todo'];
 
