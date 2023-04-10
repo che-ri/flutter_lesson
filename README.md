@@ -20,4 +20,9 @@
 
 ## 공지
 
-- weather_app의 경우 [weather api](https://www.weatherapi.com/) 로그인 후, 개인 키를 발급받아 사용해야합니다.
+- weather_app
+  - [weather api](https://www.weatherapi.com/) 로그인 후, 개인 키를 발급받아 사용해야합니다.
+- firebase_n_todo
+  - [firebase](https://firebase.google.com/?hl=ko) 콘솔에서 firebase Database를 생성합니다.
+  - 터미널을 실행하여 프로젝트 경로에서 firebase login을 입력합니다.
+  - 터미널에서 firebase config를 입력하여 구동환경과 Database를 연결시켜줍니다.
