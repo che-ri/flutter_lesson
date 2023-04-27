@@ -15,6 +15,7 @@
 11. stream_n_stopwatch : 스트림을 활용한 스톱워치 예제
 12. theme : 테마 예제
 13. weather_app : [weather api](https://www.weatherapi.com/)를 활용한 날씨앱 예제
+14. widget : 위젯 예제
 
 <br/>
 
